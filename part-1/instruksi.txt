@@ -1,2 +1,9 @@
 Instruksi:
 - jawab soal dan taruh solusi di folder ini!
+
+1. Peran utama DE adalah sebagai role untuk mengambil data mentah dan mengolahnya (membersihkan) sehingga dalam ekosistem data akan berdampak pada data yang di-supply untuk dikelola secara terus menerus. Peran ini berbeda karena DE menjadi peran terdepan untuk mengolah data mentah (raw data) yang mana data ini dapat diubah menjadi lebih baik untuk diproses lebih lanjut menjadi small data, big data, dan jenis data lainnya.
+
+2. DE dapat bersinggungan pada tahap awal dan akhir dengan role data scientist dan analyst. Seperti saat pertama kali membuat dashboard ataupun membuat pipeline, menyusun data yang diminta, serta membersihkan code. Pada tahap akhir juga DE beririsan dengan membuat report dan menganilisa data yang telah diolah dengan memverifikasi data.
+
+3. ETL merupakan Extract-Transfrom-Load yaitu sebuah proses yang sudah cukup lama digunakan yang mana data diekstrak dari berbagai sumber, kemudian diubah, dan disatukan pada sebuah wadah. Proses ini memiliki keunggulan karena hasil data akan jadi lebih bersih, tak ada duplikat, dan sedikit menggunakan storage, karena data di-load terakhir. Digunakan saat membutuhkan credential data penting sehingga nantinya hasil akan melalui proses masking dan enkripsi.
+ELT merupakan Extract-Load-Transform yaitu sebuah proses yang baru-baru ini digunakan untuk mempercepat pengolahan data, situasinya biasanya saat ada permintaan dari klien atau stakeholder sehingga data dibutuhkan segera. Karena tuntutan yang cepat maka cara ini lebih fleksibel dan maintenance lebih minim, namun kekurangannya adalah akan ada banyak data yang duplicate karena melalui proses load terlebih dahulu, sehingga data mengalami anomali.
