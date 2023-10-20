@@ -1,0 +1,86 @@
+create table city (
+	city_code int,
+	city_name text,
+	primary key (city_code)
+);
+
+create table province(
+	province_code int,
+	province_name text,
+	primary key (province_code)
+);
+
+create table employee (
+	employee_id serial,
+	employee_name text,
+	city_code int,
+	province_code int,
+	primary key (employee_id),
+	foreign key (city_code) references city (city_code),
+	foreign key (province_code) references province (province_code)
+
+);
+
+create table employee_job(
+	employee_id int,
+	job_code int,
+	foreign key (employee_id) references employee (employee_id),
+	primary key (job_code)
+
+);
+
+create table job (
+	job_code int,
+	job_name text,
+	foreign key (job_code) references employee_job (job_code)
+
+);
+
+
+
+insert into city (city_code, city_name) values
+	(201, 'New York'),
+	(202, 'Los Angeles'),
+	(203, 'Chicago'),
+	(204, 'Houston'),
+	(205, 'Miami'),
+	(206, 'Boston'),
+	(207, 'San Fransisco'),
+	(208, 'Seattle'),
+	(209, 'Denver'),
+	(210, 'Atlanta');
+
+insert into province (province_code, province_name) values
+	(301, 'New York'),
+	(302, 'California'),
+	(303, 'Illinois'),
+	(304, 'Texas'),
+	(305, 'Florida'),
+	(306, 'Massachusetts'),
+	(307, 'California'),
+	(308, 'Washington'),
+	(309, 'Colorado'),
+	(310, 'Georgia');
+
+insert into employee (employee_name, city_code, province_code) values
+	('John Smith', 201, 301),
+	('Alice Johnson',202, 302),
+	('Bob Davis',203, 303),
+	('Emily Wilson',204,304),
+	('Michael Lee',205,305),
+	('Sarah Brown',206,306),
+	('James Clark',207,307),
+	('Laura Tylor', 208,308),
+	('Daniel White',209,309),
+	('Olivia Martin',210,310);
+
+
+insert into employee_job (job_code) values
+	(101),
+	(102),
+	(103);
+
+insert into job (job_code, job_name) values
+	(101,'Software Engineer'),
+	(102,'Data Analyst'),
+	(103,'Data Engineer');

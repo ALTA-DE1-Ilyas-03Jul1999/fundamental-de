@@ -1,2 +1,13 @@
 Instruksi:
 - jawab soal dan taruh solusi di folder ini!
+
+1. Relational database digunakan saat membutuhkan data dengan menggunakan table (sql) sehingga row dan column jelas fungsinya. Hal ini membuat relational database dapat menggunakan id (primary key) atau key lainnya yang berfungsi untuk memberikan index khusus yang unik sehingga mudah untuk dikelola dan dihubungkan dengan table lain. Selain itu digunakan juga saat table butuh untuk dinormalisasi.
+nosql database adalah selain dari table (sql), contohnya ialah grafik, key-value, atau menggunakan tipe JSON digunakan saat membutuhkan cache, save password, leaderboard, dan lainnya; yang menyimpan sebuah token unik yang dapat ditarik kembali.
+
+2. Perbedaan:
+- Database : adalah wadah dari kumpulan data baik itu mentah atau sudah dikelola yang dapat diolah dan dimanipulasi sedemikian rupa sehingga data tersebut dapat diteruskan secara lebih lanjut.
+- Data lake: adalah tempat staging pada proses ELT dan ETL sehingga dapat menampung data sementara yang sudah di-ekstrak.
+- Data warehouse : adalah sistem yang menampung berbagai macam tipe data dari bermacam sumber sehingga dapat digunakan untuk analisis dan membuat laporan.
+- Data Mart : adalah sebuah cabang yang dikhususkan kepada departemen atau divisi agar memiliki database-nya sendiri.
+
+3. Normalisasi adalah pengelompokan dengan memecah satu table sehingga memudahkan untuk dibaca serta mencegah data redudancy (duplikat). Normalisasi dilakukan dengan cara membuat table terpisah dan menggunakan id atau code untuk join.
